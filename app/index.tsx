@@ -9,6 +9,7 @@ import Framework7 from 'framework7/framework7-lite.esm.bundle.js';
 import Framework7React, { App } from 'framework7-react';
 
 import './app.global.css';
+import FilesPanel from './components/FilesPanel/FilesPanel';
 
 // Init F7-React Plugin
 Framework7.use(Framework7React);
@@ -25,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () =>
           name: 'My App',
           id: 'com.demoapp.test',
         }}
-      />
+      >
+        <FilesPanel />
+      </App>
     </AppContainer>,
     document.getElementById('root')
   )

@@ -5407,6 +5407,11 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+directory-tree@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.2.4.tgz#6d5bd7d82e48378e256a1e87b678a43c50076e2e"
+  integrity sha512-2N43msQptKbi3WMfIs+U09yi6bfyKL+MWyj5VMj8t1F/Tx04bt1cn/EEIU3o1JBltlJk7NQnzOEuTNa/KQvbWA==
+
 discontinuous-range@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
@@ -6870,6 +6875,11 @@ fragment-cache@^0.2.1:
   integrity sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk=
   dependencies:
     map-cache "^0.2.2"
+
+framework7-icons@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/framework7-icons/-/framework7-icons-3.0.1.tgz#2fdb558c3c0755a97fccdd3412dda05ed1d50a27"
+  integrity sha512-nb+4T//4gyWHUE85szKUm2JlMe/yA1ACW73qzF1EI76r2vkeaKOQ36P8/nwrmUQ2bKyojGQ2gVF0ar7XkaKiog==
 
 framework7-react@^5.7.8:
   version "5.7.8"

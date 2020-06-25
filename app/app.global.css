@@ -5,6 +5,9 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
  */
 @import '~framework7/css/framework7.bundle.css';
+@import '~framework7-icons/css/framework7-icons.css';
+
 body {
   margin: 0;
+  background: transparent !important;
 }
