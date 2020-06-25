@@ -6,6 +6,7 @@ import {
   Block,
   Treeview,
   TreeviewItem,
+  Navbar,
 } from 'framework7-react';
 
 import dirTree from 'directory-tree';
@@ -14,7 +15,7 @@ export default function FilesPanel(): ReactElement {
   const [files, setFiles] = useState<any>();
 
   function getTree() {
-    const tree = dirTree('/Users/donwayo/Desktop/electron-is-dev');
+    const tree = dirTree('/Users/donswayo/Desktop/Electron-React-Typescript');
     console.log(tree);
     setFiles(tree);
   }
@@ -36,31 +37,21 @@ export default function FilesPanel(): ReactElement {
   }, []);
 
   return (
-    <Panel
-      left
-      reveal
-      resizable
-      opened
-      style={{ backgroundColor: 'transparent' }}
-    >
-      <View>
-        <Page style={{ backgroundColor: 'transparent' }}>
-          <Block>Left panel content</Block>
-          <Block
-            strong
-            className="no-padding-horizontal"
-            style={{ backgroundColor: 'transparent' }}
-          >
-            {files ? (
-              <Treeview style={{ backgroundColor: 'transparent' }}>
-                {renderTree(files)}
-              </Treeview>
-            ) : (
-              <></>
-            )}
-          </Block>
-        </Page>
-      </View>
-    </Panel>
+    <>
+      <Block>Left panel content</Block>
+      <Block
+        strong
+        className="no-padding-horizontal"
+        style={{ backgroundColor: 'transparent' }}
+      >
+        {files ? (
+          <Treeview style={{ backgroundColor: 'transparent' }}>
+            {renderTree(files)}
+          </Treeview>
+        ) : (
+          <></>
+        )}
+      </Block>
+    </>
   );
 }

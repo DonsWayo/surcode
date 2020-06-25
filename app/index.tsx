@@ -10,6 +10,7 @@ import Framework7React, { App } from 'framework7-react';
 
 import './app.global.css';
 import FilesPanel from './components/FilesPanel/FilesPanel';
+import MainLayout from './components/MainLayout';
 
 // Init F7-React Plugin
 Framework7.use(Framework7React);
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () =>
           id: 'com.demoapp.test',
         }}
       >
-        <FilesPanel />
+        <MainLayout />
       </App>
     </AppContainer>,
     document.getElementById('root')

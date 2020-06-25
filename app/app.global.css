@@ -6,8 +6,14 @@
  */
 @import '~framework7/css/framework7.bundle.css';
 @import '~framework7-icons/css/framework7-icons.css';
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/material.css';
 
 body {
   margin: 0;
   background: transparent !important;
+}
+
+.CodeMirror {
+  height: 100%;
 }
