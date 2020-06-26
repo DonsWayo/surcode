@@ -8,13 +8,13 @@ import TopBar from './TopBar/TopBar';
 export default function MainLayout(): JSX.Element {
   return (
     <>
-      <View main>
-        <Page>
+      <View main style={{ backgroundColor: 'transparent' }}>
+        <Page style={{ backgroundColor: 'transparent' }}>
           <SplitPane split="vertical" minSize={0} defaultSize={280}>
             <div>
               <FilesPanel />
             </div>
-            <div>
+            <div style={{ height: '100%' }}>
               <TopBar />
               <CodeEditor />
             </div>

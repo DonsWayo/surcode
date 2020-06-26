@@ -1,13 +1,5 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import {
-  Panel,
-  View,
-  Page,
-  Block,
-  Treeview,
-  TreeviewItem,
-  Navbar,
-} from 'framework7-react';
+import { Block, Treeview, TreeviewItem } from 'framework7-react';
 
 import dirTree from 'directory-tree';
 
@@ -15,7 +7,7 @@ export default function FilesPanel(): ReactElement {
   const [files, setFiles] = useState<any>();
 
   function getTree() {
-    const tree = dirTree('/Users/donswayo/Desktop/Electron-React-Typescript');
+    const tree = dirTree('/Users/donwayo/Desktop/electron-is-dev');
     console.log(tree);
     setFiles(tree);
   }
@@ -24,6 +16,7 @@ export default function FilesPanel(): ReactElement {
     <TreeviewItem
       key={Math.random()}
       label={nodes.name}
+      selectable
       iconF7={nodes.type === 'directory' ? 'folder_fill' : 'documents'}
     >
       {Array.isArray(nodes.children)
@@ -38,11 +31,11 @@ export default function FilesPanel(): ReactElement {
 
   return (
     <>
-      <Block>Left panel content</Block>
       <Block
         strong
+        noHairlines
         className="no-padding-horizontal"
-        style={{ backgroundColor: 'transparent' }}
+        style={{ backgroundColor: 'transparent', marginTop: '37px' }}
       >
         {files ? (
           <Treeview style={{ backgroundColor: 'transparent' }}>

@@ -1,29 +1,39 @@
-import * as React from 'react';
-import { Appbar, Button, Searchbar } from 'framework7-react';
+import React from 'react';
+import { Appbar, Button, ListItem, List } from 'framework7-react';
 
 export default function TopBar() {
   return (
-    <Appbar>
+    <Appbar style={{ backgroundColor: 'transparent', height: '' }}>
       <div className="left">
-        <Button
-          small
-          panelToggle="left"
-          className="display-flex"
-          iconF7="bars"
-        />
         <Button
           small
           className="display-flex margin-left-half"
           iconF7="square_list"
         />
-        <Button
-          small
-          className="display-flex margin-left-half"
-          iconF7="arrowshape_turn_up_left_fill"
-        />
       </div>
       <div className="right">
-        <Searchbar inline customSearch disableButton={false} />
+        <Button
+          animate
+          className="display-flex margin-left-half"
+          iconF7="play_fill"
+        />
+        <List>
+          <ListItem
+            title=" "
+            smartSelect
+            smartSelectParams={{ openIn: 'popover' }}
+          >
+            <select name="superhero" defaultValue={['Batman']}>
+              <option value="Batman">Batman</option>
+              <option value="Superman">Superman</option>
+              <option value="Hulk">Hulk</option>
+              <option value="Spiderman">Spiderman</option>
+              <option value="Ironman">Ironman</option>
+              <option value="Thor">Thor</option>
+              <option value="Wonder Woman">Wonder Woman</option>
+            </select>
+          </ListItem>
+        </List>
       </div>
     </Appbar>
   );
